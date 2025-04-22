@@ -61,7 +61,7 @@
         </div>
         <div class="resume-item">
           <p><strong>Nankai University</strong>, Dual Bachelor's Degrees in Software Engineering and Finance, GPA: 92.7/100 (Ranked 2/120)</p>
-          <p style="text-align: right; flex-shrink: 0; width: 150px;">2016 -- 2020</p>
+          <p style="margin-left: auto; text-align: right;">2016 -- 2020</p>
         </div>
 
 <!--        {% for education in site.data.education %}-->
@@ -84,25 +84,30 @@
       <!-- end Education -->
       {% endif %}
 
-      {% if site.resume_section_experience %}
-      <!-- begin Experience -->
+      <!-- begin Research -->
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Experience</h2>
+          <h2>Research</h2>
         </header>
 
-        {% for job in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
+          <h3 class="resume-item-title" itemprop="name">Knowledge Injection and Generalization</h3>
+          <h4 class="resume-item-details" itemprop="description">Large Language Models Often Say One Thing and Do Another &bull; ICLR 2025</h4>
+          <p class="resume-item-copy">This is the first work to quantitatively investigate the consistency between words an deeds in LLMs across multiple domains. A new benchmark, word and deed consistency test, was proposed, covering four domains: opinion, (im)moral values, and theory. Our findings across diverse models reveal: (1) a prevalent inconsistency between words and deeds, particularly in non-moral contexts; (2) lack of strong beliefs in the base models and unsynchronized alignment in aligned models may underlie this; (3) separate alignment on words or deeds results in poor and even unpredictable influence on the other aspect. This supports the hypothesis that LLMs encode knowledge for words and deeds in distinct spaces.</p>
+
+          <h4 class="resume-item-details" itemprop="description">Memorizing is Not Enough: Deep Knowledge Injection Through Reasoning &bull; Submitted to ACL 2025</h4>
+          <p class="resume-item-copy">This is the first work to quantitatively investigate the consistency between words an deeds in LLMs across multiple domains. A new benchmark, word and deed consistency test, was proposed, covering four domains: opinion, (im)moral values, and theory. Our findings across diverse models reveal: (1) a prevalent inconsistency between words and deeds, particularly in non-moral contexts; (2) lack of strong beliefs in the base models and unsynchronized alignment in aligned models may underlie this; (3) separate alignment on words or deeds results in poor and even unpredictable influence on the other aspect. This supports the hypothesis that LLMs encode knowledge for words and deeds in distinct spaces.</p>
+        </div>
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Knowledge Injection and Generalization</h3>
+          <h4 class="resume-item-details" itemprop="description">Large Language Models Often Say One Thing and Do Another &bull; ICLR 2025</h4>
+          <p class="resume-item-copy">Current approaches focus primarily on shallow knowledge injection (e.g., memorization and retrieval). We propose a four-level framework—Memorization, Retrieval, Reasoning, and Association—that formalizes the depth of knowledge injection. Based on this framework, we build DeepKnowledge, a benchmark to evaluate fine-grained knowledge injection for novel, incremental, and updated knowledge. Our experiments provide systematic insights into key factors and matching techniques for each knowledge level.</p>
+        </div>
 
       </section>
-      <!-- end Experience -->
-      {% endif %}
+      <!-- end Research -->
 
 
       {% if site.resume_section_projects %}
@@ -120,6 +125,47 @@
           <p class="resume-item-copy">{{ project.description }}</p>
         </div>
         {% endfor %}
+
+      </section>
+      <!-- end Projects -->
+      {% endif %}
+
+<!--      {% if site.resume_section_experience %}-->
+<!--      &lt;!&ndash; begin Experience &ndash;&gt;-->
+<!--      <section class="content-section">-->
+
+<!--        <header class="section-header">-->
+<!--          <h2>Experience</h2>-->
+<!--        </header>-->
+
+<!--        {% for job in site.data.experience %}-->
+<!--        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">-->
+<!--          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>-->
+<!--          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>-->
+<!--          <p class="resume-item-copy">{{ job.summary }}</p>-->
+<!--        </div>&lt;!&ndash; end of resume-item &ndash;&gt;-->
+<!--        {% endfor %}-->
+
+<!--      </section>-->
+<!--      &lt;!&ndash; end Experience &ndash;&gt;-->
+<!--      {% endif %}-->
+
+
+<!--      {% if site.resume_section_projects %}-->
+<!--      &lt;!&ndash; begin Projects &ndash;&gt;-->
+<!--      <section class="content-section">-->
+<!--        <header class="section-header">-->
+<!--          <h2>Projects</h2>-->
+<!--        </header>-->
+
+<!--        {% for project in site.data.projects %}-->
+<!--        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">-->
+<!--          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />-->
+<!--          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>-->
+<!--          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>-->
+<!--          <p class="resume-item-copy">{{ project.description }}</p>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
 
       </section>
       <!-- end Projects -->
