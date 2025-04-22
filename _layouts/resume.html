@@ -48,6 +48,42 @@
 
       </header>
 
+      {% if site.resume_section_education %}
+      <!-- begin Education -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Education</h2>
+        </header>
+
+        <div class="resume-item">
+          <p><strong>Institute of Software, Chinese Academy of Sciences</strong>, Ph.D. in Natural Language Processing (Ongoing)</p>
+          <p style="text-align: right; flex-shrink: 0; width: 150px;">2020 -- Present</p>
+        </div>
+        <div class="resume-item">
+          <p><strong>Nankai University</strong>, Dual Bachelor's Degrees in Software Engineering and Finance, GPA: 92.7/100 (Ranked 2/120)</p>
+          <p style="text-align: right; flex-shrink: 0; width: 150px;">2016 -- 2020</p>
+        </div>
+
+<!--        {% for education in site.data.education %}-->
+<!--        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">-->
+<!--          <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>-->
+<!--          <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>-->
+<!--          <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>-->
+<!--          <p class="resume-item-copy" itemprop="description">-->
+<!--            <ul class="resume-item-list">-->
+<!--              {% for award in education.awards %}-->
+<!--              <li>{{ award.award }}</li>-->
+<!--              {% endfor %}-->
+<!--            </ul>-->
+
+
+<!--          <p class="resume-item-copy">{{ education.summary }}</p>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+      </section>
+      <!-- end Education -->
+      {% endif %}
+
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
       <section class="content-section">
@@ -66,34 +102,6 @@
 
       </section>
       <!-- end Experience -->
-      {% endif %}
-
-
-      {% if site.resume_section_education %}
-      <!-- begin Education -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Education</h2>
-        </header>
-
-        {% for education in site.data.education %}
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
-          <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
-          <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
-          <p class="resume-item-copy" itemprop="description">
-            <ul class="resume-item-list">
-              {% for award in education.awards %}
-              <li>{{ award.award }}</li>
-              {% endfor %}
-            </ul>
-
-
-          <p class="resume-item-copy">{{ education.summary }}</p>
-        </div>
-        {% endfor %}
-      </section>
-      <!-- end Education -->
       {% endif %}
 
 
