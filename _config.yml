@@ -58,8 +58,6 @@ resume_print_social_links:      true
 # Design settings
 resume_theme:                   default
 
-include: ["_layouts/index-zh.html", "_layouts/index-en.html"]
-
 collections:
   zh:
     output: true
