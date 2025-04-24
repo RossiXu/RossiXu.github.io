@@ -61,7 +61,7 @@ resume_theme:                   default
 include: ["_layouts/index-zh.html", "_layouts/index-en.html"]
 
 collections:
-  zh-CN:
+  zh:
     output: true
     permalink: /zh/:path/
 
