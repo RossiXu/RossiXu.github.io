@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include head-zh.html %}
 
-  <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
+  <body class="theme-default">
 
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
@@ -18,19 +18,15 @@
       <header class="page-header">
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
-        {% if site.resume_avatar == 'true' %}
         <img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
-        {% endif %}
 
         <!-- Your name is defined in the _config.yml file -->
         <h1 class="header-name" itemprop="name">徐若曦</h1>
 
         <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
-        {% if site.display_header_contact_info == 'true' %}
         <div class="header-contact-info">
           <p>{{ site.resume_header_contact_info }}</p>
         </div>
-        {% endif %}
 
         <div class="title-bar no-print">
 
